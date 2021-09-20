@@ -141,26 +141,25 @@ class CreateProductComponent extends Component {
                                     <form>
                                         <div className = "form-group">
                                             <label> Nombre: </label>
-                                            <input placeholder="Nombre" name="nombre" className="form-control"
+                                            <input placeholder="Nombre" type="text" maxLength="30" name="nombre" className="form-control"
                                                 value={this.state.nombre} onChange={this.changeNameHandler}/>
                                             <span style={{ color: "red" }}>{this.state.errors["name"]}</span>
 
                                         </div>
                                         <div className = "form-group">
                                             <label> Clave: </label>
-                                            <input placeholder="Clave" name="clave" className="form-control"
+                                            <input placeholder="Clave" type="text" minLength="3" maxLength="30" name="clave" className="form-control"
                                                 value={this.state.clave} onChange={this.changeClaveHandler}/>
                                             <span style={{ color: "red" }}>{this.state.errors["clave"]}</span>
 
                                         </div>
                                         <div className = "form-group">
                                             <label> Precio: </label>
-                                            <input placeholder="Precio" name="precio" className="form-control"
+                                            <input type="number" step="0.1" placeholder="Precio" name="precio" className="form-control"
                                                 value={this.state.precio} onChange={this.changePrecioHandler}/>
                                             <span style={{ color: "red" }}>{this.state.errors["precio"]}</span>
                                         </div>
                                         <div className="form-group">
-
                                             <label>Unidad:</label>
                                             <select className="form-control" name="unidad" value={this.state.selectedValue}  onChange={this.changeUnidadHandler}
                                             ><option value="0">--Seleccione--</option>

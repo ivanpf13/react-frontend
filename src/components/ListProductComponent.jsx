@@ -65,8 +65,11 @@ class ListProductComponent extends Component {
                                              <td> {articulo.precio}</td>
                                             <td>
                                                  <button onClick={ () => this.editProduct(articulo.id)} className="btn btn-info">Actualizar </button>
-                                                 <button style={{marginLeft: "10px"}} onClick={ () => this.deleteProduct(articulo.id)} className="btn btn-danger">Eliminar </button>
-                                             </td>
+                                                <button style={{marginLeft: "10px"}} onClick={() => window.confirm("¿Esta seguro de eliminar este producto?") && this.deleteProduct(articulo.id)}
+                                                        className="btn btn-danger">Eliminar </button>
+
+
+                                            </td>
                                         </tr>
                                     )
                                 }
