@@ -29,6 +29,12 @@ class CreateProductComponent extends Component {
         });
         // step 4
         if(this.state.id === '_add'){
+            let fields = this.state.fields;
+            fields["nombre"] = "dasd"
+            fields["clave"] = "urur"
+            fields["precio"] = "ififif"
+            fields["unidad"] = "sadsa"
+            this.setState({ fields });
             return;
         }else{
             ProductosService.getProductById(this.state.id).then( (res) =>{
